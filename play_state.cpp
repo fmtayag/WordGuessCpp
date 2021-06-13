@@ -7,14 +7,6 @@ PlayState::PlayState(Context* context) {
     m_Context = context;
 }
 
-void PlayState::Display() {
-    std::cout << "I am the play state.\n";
-}
-
-void PlayState::Update() {
-    // The update function
-}
-
-void PlayState::GetInput() {
-    // The input function
+void PlayState::Handle() {
+    std::cout << "There are 10 words to guess. Get ready!\n";
 }

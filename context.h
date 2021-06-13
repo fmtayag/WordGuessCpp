@@ -9,9 +9,9 @@ class Context {
     public:
         Context();
 
-        void Display();
-        void Update();
-        void GetInput(bool& running);
+        void Handle();
 
         void SetState(State* state);
+
+        bool isExiting;
 };

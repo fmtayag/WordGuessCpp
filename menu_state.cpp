@@ -8,33 +8,26 @@ MenuState::MenuState(Context* context) {
     m_Context = context;
 }
 
-void MenuState::Display() {
+void MenuState::Handle() {
+    char choice;
+
     std::cout << "Word Guess in C++\n";
     std::cout << "by zyenapz\n";
     std::cout << "------------------\n";
     std::cout << "1. Play\n";
     std::cout << "2. Exit\n";
     std::cout << "> Select: ";
-}
-
-void MenuState::GetInput(bool& running) {
-    char choice;
-
     std::cin >> choice;
 
     switch(choice) {
         case '1':
-            // TODO
+            m_Context->SetState(new PlayState(m_Context));
             break;
         case '2':
-            running = false;
+            m_Context->isExiting = true;
             break;
         default:
             std::cout << "That's not a valid option.\n";
             break;
     }
-}
-
-void MenuState::Update() {
-    // The update function
 }

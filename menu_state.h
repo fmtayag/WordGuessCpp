@@ -7,7 +7,5 @@ class MenuState: public State {
 
     public:
         MenuState(Context* context);
-        void Display();
-        void Update();
-        void GetInput(bool& running);
+        void Handle();
 };

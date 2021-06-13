@@ -3,18 +3,11 @@
 
 Context::Context() {
     this->m_State = new MenuState(this);
+    isExiting = false;
 }
 
-void Context::Display() {
-    this->m_State->Display();
-}
-
-void Context::Update() {
-    this->m_State->Update();
-}
-
-void Context::GetInput(bool& running) {
-    this->m_State->GetInput(running);
+void Context::Handle() {
+    this->m_State->Handle();
 }
 
 void Context::SetState(State* state) {
