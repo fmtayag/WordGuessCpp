@@ -13,8 +13,8 @@ void Context::Update() {
     this->m_State->Update();
 }
 
-void Context::GetInput() {
-    this->m_State->GetInput();
+void Context::GetInput(bool& running) {
+    this->m_State->GetInput(running);
 }
 
 void Context::SetState(State* state) {

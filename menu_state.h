@@ -9,5 +9,5 @@ class MenuState: public State {
         MenuState(Context* context);
         void Display();
         void Update();
-        void GetInput();
+        void GetInput(bool& running);
 };

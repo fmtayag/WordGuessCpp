@@ -6,8 +6,14 @@
 int main()
 {
     Context context1;
-    context1.Display();
-    context1.Display();
-    system("PAUSE");
+    
+    bool running = true;
+    while(running) {
+        context1.Display();
+        context1.GetInput(running);
+        context1.Update();
+        std::cout << "\n\n";
+    }
+
     return 0;
 }

@@ -9,17 +9,32 @@ MenuState::MenuState(Context* context) {
 }
 
 void MenuState::Display() {
-    std::cout << "I am the menu state.\n";
-    if(true) {
-        m_Context->SetState(new PlayState(m_Context));
+    std::cout << "Word Guess in C++\n";
+    std::cout << "by zyenapz\n";
+    std::cout << "------------------\n";
+    std::cout << "1. Play\n";
+    std::cout << "2. Exit\n";
+    std::cout << "> Select: ";
+}
 
-    } 
+void MenuState::GetInput(bool& running) {
+    char choice;
+
+    std::cin >> choice;
+
+    switch(choice) {
+        case '1':
+            // TODO
+            break;
+        case '2':
+            running = false;
+            break;
+        default:
+            std::cout << "That's not a valid option.\n";
+            break;
+    }
 }
 
 void MenuState::Update() {
     // The update function
-}
-
-void MenuState::GetInput() {
-    // The input function
 }

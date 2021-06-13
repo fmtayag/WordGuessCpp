@@ -11,7 +11,7 @@ class Context {
 
         void Display();
         void Update();
-        void GetInput();
+        void GetInput(bool& running);
 
         void SetState(State* state);
 };
