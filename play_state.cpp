@@ -3,6 +3,8 @@
 #include <ctime>
 #include <cstdlib>
 #include <bits/stdc++.h>
+#include <vector>
+#include <string>
 #include "context.h"
 #include "menu_state.h"
 #include "play_state.h"
@@ -15,6 +17,15 @@ PlayState::PlayState(Context *context)
     currentQuestion = 0;
     score = 0;
     answer = "";
+
+    // Initialize words list
+    words  = {
+            {"banana", "a long yellow fruit"},
+            {"apple", "a round red fruit"},
+            {"book", "a collection of pages bound together with covers"},
+            {"bottle", "a small container used for storing liquid"},
+            {"coat", "a garment worn outdoors, especially during cold weathers"}
+        };
 
     // Shuffle words
     std::srand(std::time(0));
